@@ -174,6 +174,7 @@ const Formulario = ({
                 date={fecha}
                 locale="es"
                 onDateChange={date => setFecha(date)}
+                theme="auto"
               />
             </View>
           </View>
@@ -195,7 +196,6 @@ const Formulario = ({
           {/* Guardar Form */}
           <Pressable style={styles.btnNuevaCita} onPress={handleCita}>
             <Text style={styles.btnNuevaCitaTexto}>
-              {' '}
               {pacienteObj.id ? 'Editar' : 'Agregar'} Paciente
             </Text>
           </Pressable>
@@ -251,13 +251,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 15,
     borderRadius: 10,
+    color: '#000',
   },
   sintomasInput: {
     height: 100,
+    textAlignVertical: 'top',
   },
   fechaContenedor: {
     backgroundColor: '#fff',
     borderRadius: 10,
+    color: '#000',
   },
   btnNuevaCita: {
     marginVertical: 50,
